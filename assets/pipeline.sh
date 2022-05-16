@@ -5,8 +5,15 @@ echo "(2) Compiling the application"
 if npm run build; then
 	echo "Build successful"
 	git add .
-	git commit -m "COMPX341-22A-A3 Comitting from CI/CD Pipeline"
-	git push origin main
+	git commit -m "$1"
+	#check if a custom commit message has been given
+	if [ -z "$1" ]; then 
+		echo "Commit Error: Please add a custom commit message"
+		exit
+	else
+		git push origin main
+		echo "Pushed changes to github"
+fi
 else 
 	echo "Build failed, exiting pipeline"
 	exit
