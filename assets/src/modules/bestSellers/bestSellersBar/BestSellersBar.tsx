@@ -34,4 +34,4 @@ export class BestSellersBar extends React.Component {
   }
 }
 
-export default BestSellersBar;
+#export default BestSellersBar;
