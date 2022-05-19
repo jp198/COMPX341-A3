@@ -1,4 +1,4 @@
-//
+//Jascha Penaredondo 1538077 
 export default {
   apiGateway: {
     REGION: "us-east-1",
